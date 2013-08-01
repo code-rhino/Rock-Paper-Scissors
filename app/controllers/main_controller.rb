@@ -23,22 +23,24 @@ class MainController < ApplicationController
       end
     end 
     
-	def check 
-		check = {"rock" => "paper", "paper" => "scissors", "scissors" => "rock"}
-	end
-	
-	def winner(player, comp)
-		if player  == comp
-			return "Tie"
-		elsif player == check.values_at(comp).first
-			return "Winner"		
-		else
-			return "Loser"
-		end 
-	end
+
 	
 	private 
 		def set_select
 			 @selections = ['rock','paper', 'scissors' ]
+		end
+
+		def check 
+			check = {"rock" => "paper", "paper" => "scissors", "scissors" => "rock"}
+		end
+		
+		def winner(player, comp)
+			if player  == comp
+				return "Tie"
+			elsif player == check.values_at(comp).first
+				return "Winner"		
+			else
+				return "Loser"
+			end 
 		end
 end
