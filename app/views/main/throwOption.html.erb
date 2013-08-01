@@ -1,0 +1,29 @@
+<div class="page-header">
+  <h1>Game Results</h1>
+</div>
+
+<div id="results">
+	Hello Player,
+</div>
+
+<div>
+	You threw: <b><%= @player %></b>
+</div>
+<div>
+	The Computer threw: <b><%= @computer %></b>
+</div>
+<div> You are a <b><%= @result %></b>
+</div>
+
+<div> 
+	This game has been played <b><%= @game_stats.count %></b> times 
+</div>
+<div>
+	You have won this game <b><%= @game_wins.count %></b> times
+</div>
+
+<div>
+	You have tied this game <b><%= @game_tied.count %></b> times
+</div>
+
+<%= link_to "Play again?" , root_path, :class=>"btn"%>
